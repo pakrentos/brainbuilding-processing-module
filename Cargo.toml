@@ -1,0 +1,59 @@
+# [[bin]]
+# name = "brainbuilding"
+# path = "src/bin.rs"
+
+[package]
+name = "brainbuilding-module"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.76"
+
+[dependencies]
+async-stream = "0.3"
+async-trait = "0.1"
+eyre = "0.6"
+futures = "0.3"
+reqwest = { version = "0.12", features = ["json"] }
+serde_json = "1.0"
+# tokio = "1"
+tokio = { version = "1", features = ["full"] }
+tracing = { version = "0.1", features = ["log"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+# lsl = "0.1.1"
+# lsl = { workspace = true }
+burberry = { workspace = true }
+# butter = "0.3.0"
+iir_filters = { version = "0.1.3" }
+# smartcore = { version = "0.3.2" }
+ffsvm = { version = "0.10.0"}
+ndarray = { version = "0.16", features = ["serde"] }
+nalgebra = "0.32"
+num-complex = "0.4.6"
+ndarray-stats = "0.6.0"
+butterworth = "0.1.0"
+rayon = "1.10.0"
+npy = "0.4.0"
+
+[dev-dependencies]
+# tokio = { version = "1", features = ["full"] }
+
+[workspace]
+members = [
+    "crates/lsl",
+    "crates/lsl-sys",
+    "crates/burberry"
+]
+
+[workspace.package]
+authors = ["ya"]
+edition = "2021"
+# repository = "https://bitbucket.org/innowise-group/vitreus-power-plant"
+version = "0.0.1"
+
+[workspace.dependencies]
+lsl-sys = { path = "crates/lsl-sys" }
+lsl = { path = "crates/lsl" }
+burberry = { path = "crates/burberry" }
+serde = { version = "1.0", features = ["derive"] }

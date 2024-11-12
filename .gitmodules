@@ -1,0 +1,3 @@
+[submodule "crates/lsl-sys/liblsl"]
+	path = crates/lsl-sys/liblsl
+	url = https://github.com/sccn/liblsl.git

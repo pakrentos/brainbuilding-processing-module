@@ -1,0 +1,16 @@
+[package]
+name = "lsl"
+version = "0.1.1"
+authors = ["Intheon <contact@intheon.io>", "Christian Kothe <christian.kothe@intheon.io>"]
+edition = "2018"
+description = "Lab streaming layer (liblsl) bindings for rust."
+repository = "https://github.com/labstreaminglayer/liblsl-rust"
+license = "MIT"
+keywords = ["lsl", "streaming", "protocol", "ffi", "bindings"]
+categories = ["api-bindings", "network-programming"]
+
+[dependencies]
+lsl-sys = { workspace = true }
+
+[dev-dependencies]
+rand = "~0.7"

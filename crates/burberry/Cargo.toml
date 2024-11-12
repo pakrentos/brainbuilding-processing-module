@@ -1,0 +1,22 @@
+[package]
+name = "burberry"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.76"
+
+[dependencies]
+async-stream = "0.3"
+async-trait = "0.1"
+eyre = "0.6"
+futures = "0.3"
+reqwest = { version = "0.12", features = ["json"] }
+serde_json = "1"
+tokio = "1"
+tracing = { version = "0.1", features = ["log"] }
+thiserror = "1.0"
+lsl = { workspace = true }
+serde = {workspace = true}
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+
